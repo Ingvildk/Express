@@ -1,0 +1,17 @@
+{
+  "name": "expre..",
+  "version": "1.0.0",
+  "description": "Learning express",
+  "main": "two_index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "ingvild wahl kongsgaard",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
