@@ -1,0 +1,14 @@
+{
+  "name": "my-fun-project",
+  "version": "0.2.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ingvild kongsgaard",
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^2.2.1"
+  }
+}
