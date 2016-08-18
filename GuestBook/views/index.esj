@@ -1,5 +1,10 @@
-<!DOCTYPE>
-<html>
-<head></head>
-<body>Helloooo..Guestbook</body>
-</html>
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<title> Hello, world <title>
+		</head>
+	<body>
+		Helloooo..Guestbook
+	</body>
+	</html>

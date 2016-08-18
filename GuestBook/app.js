@@ -8,7 +8,7 @@ var app = express();
 //tells express the views are in the views folder
 app.set("views", path.resolve(__dirname, "views"));
 // views will use the ESJ engine
-app.set("view-engine", "ejs");
+app.set("view engine", "ejs");
 
 //Creates global array to store all your entries
 var entries = [];
@@ -24,7 +24,7 @@ app.get("/", function(request, response) {
 	response.render("index");
 });
 
-app.get("new-entry", function(request, response) {
+app.get("/new-entry", function(request, response) {
 	response.render("new-entry");
 });
 
@@ -34,9 +34,9 @@ app.post("/new-entry", function(request, response) {
 		return;
 	}
 	entries.push({
-		title:request.body.title,
+		title: request.body.title,
 		contenet: request.body.body,
-		publiched: new Data()
+		published: new Date()
 	});
 	response.redirect("/");
 });
