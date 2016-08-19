@@ -40,6 +40,11 @@ app.use(function(request, response, next) {
 	});
 });
 
+app.use(function(request, response) {
+	response.status(404);
+	response.send("File not found!");
+});
+
 app.listen(3000, function() {
 	console.log("App started on port 3000");
 });
