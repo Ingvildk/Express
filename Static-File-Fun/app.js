@@ -21,19 +21,20 @@ app.use(function(req,res, next) {
 //		2. if it exists, responde with the file and call it a day. res.sendFile
 //		3. if the file doesn't exists, continnue to the next middleware in the section. In code terms this is called next
 
-app.use(function(requests, response, next) {
-// uses path.join to find the path where the file should be	
-	var filePath = path.join(__dirname, "static", req.url);
-	//built-in fs.stat gets info about a file
+app.use(function(request, response, next) {
+// filePath is a variable containing the static files
+	var filePath = path.join(__dirname, "static", request.url);
+// fs.stat -- gets infor about the static files
 	fs.stat(filePath, function(err, fileInfo) {
 		if(err) {
 			next();
 			return;
 		}
-		// if file exists call res.sendFie
+// if file exists call res.sendFile
 		if (fileInfo.isFile()) {
-			res.sendFile(filePath);
+			response.sendFile(filePath);
 		} else {
+// if the file do not exist call the next() function			
 			next();
 		}
 	});
