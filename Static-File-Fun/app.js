@@ -2,12 +2,18 @@
 
 // Requires the modules we will need
 var express = require("express");
+var morgan = require("morgan");
 var path = require("path");
 var fs = require("fs");
 
 // creates an express app and puts it inside the app variable
 var app = express();
 
+//	use the morgan middleware 
+//	Morgan is a request logger middleware""
+app.use(morgan("short"));
+
+/*
 // THIS IS MY LOGGER. 
 // 	all requests are logged in the console
 app.use(function(req,res, next) {
@@ -15,7 +21,7 @@ app.use(function(req,res, next) {
 	console.log("Request date: " + new Date());
 	next();
 });
-
+*/
 // THE STATIC FILE SERVER MIDDLEWARE
 // 		1. check if the requested file exists in the static directory		
 //		2. if it exists, responde with the file and call it a day. res.sendFile
