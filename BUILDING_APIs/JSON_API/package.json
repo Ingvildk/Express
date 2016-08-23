@@ -1,0 +1,19 @@
+{
+  "name": "random-number-api",
+  "version": "1.0.0",
+  "description": "generates a random number",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "api",
+    "json"
+  ],
+  "author": "ingvild wahl kongsgaard",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodemon": "^1.10.2"
+  }
+}
