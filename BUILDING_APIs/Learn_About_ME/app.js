@@ -7,6 +7,8 @@ var passport = require("passport");
 var path = require("path");
 var session = require("express-session");
 var bodyParser = require("body-parser");
+// not sure if working
+var bson = require('bson');
 
 var setUpPassport = require("./setuppassport");
 var routes = require("./routes");
